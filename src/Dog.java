@@ -12,7 +12,7 @@ public class Dog  implements Pet{
     public int getRandom() { return random; }
 
     public void randomToo() {
-        System.out.println("random");
+        System.out.println("pet");
         System.out.println("Dog");
     }
 

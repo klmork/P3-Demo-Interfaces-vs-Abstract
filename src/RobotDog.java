@@ -17,7 +17,8 @@ public class RobotDog implements Electronic, Pet {
     public int getRandom() { return random; }
 
     public void randomToo() {
-        System.out.println("random");
+        System.out.println("pet");
+        System.out.println("electronic");
         System.out.println("robotDog");
     }
 }
