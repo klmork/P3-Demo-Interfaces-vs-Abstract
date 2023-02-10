@@ -7,4 +7,8 @@ public interface Pet {
         System.out.println(getRandom() + " cool cool cool");
 
     }
+    default void randomToo() {
+        System.out.println("random");
+    }
+
 }

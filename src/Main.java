@@ -18,6 +18,7 @@ public class Main {
         for (Pet pet: pets) {
             pet.speak();
             pet.randomMethod();
+            pet.randomToo();
             if (pet instanceof Electronic)
                 ((Electronic)robot).charge(2);
             if (pet instanceof Dog)
