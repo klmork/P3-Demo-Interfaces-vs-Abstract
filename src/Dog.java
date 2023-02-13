@@ -1,4 +1,4 @@
-public class Dog  implements Pet{
+public class Dog  extends Pet{
     private int random;
     public Dog(int r) { random = r; }
     public void speak() {
@@ -12,7 +12,7 @@ public class Dog  implements Pet{
     public int getRandom() { return random; }
 
     public void randomToo() {
-        Pet.super.randomToo();
+        super.randomToo();
         System.out.println("Dog");
     }
 

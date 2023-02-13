@@ -1,14 +1,14 @@
-public interface Pet {
+public abstract class Pet {
     // implied that its public
     // ; -> not defined / implemented
-    void speak();
-    int getRandom();
-    default void randomMethod() {
+    abstract void speak();
+    abstract int getRandom();
+    public void randomMethod() {
         System.out.println(getRandom() + " cool cool cool");
 
     }
 
-    default void randomToo() {
+    public void randomToo() {
         System.out.println("pet");
     }
 }

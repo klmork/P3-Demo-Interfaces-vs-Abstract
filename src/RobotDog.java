@@ -1,4 +1,4 @@
-public class RobotDog implements Electronic, Pet {
+public class RobotDog extends Pet implements Electronic {
     private int battery;
     private int random;
 
@@ -17,7 +17,7 @@ public class RobotDog implements Electronic, Pet {
     public int getRandom() { return random; }
 
     public void randomToo() {
-        Pet.super.randomToo();
+        super.randomToo();
         Electronic.super.randomToo();
         System.out.println("robotDog");
     }
