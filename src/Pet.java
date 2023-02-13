@@ -1,10 +1,10 @@
 public abstract class Pet {
-    // implied that its public
-    // ; -> not defined / implemented
+    private int random;
+
+    public Pet(int r) { this.random = r; }
     abstract void speak();
-    abstract int getRandom();
     public void randomMethod() {
-        System.out.println(getRandom() + " cool cool cool");
+        System.out.println(random + " cool cool cool");
 
     }
 

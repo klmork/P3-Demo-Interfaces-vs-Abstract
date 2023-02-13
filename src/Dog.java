@@ -1,6 +1,6 @@
-public class Dog  extends Pet{
-    private int random;
-    public Dog(int r) { random = r; }
+public class Dog extends Pet{
+
+    public Dog(int r) { super(r); }
     public void speak() {
         System.out.println("bark");
     }
@@ -8,8 +8,6 @@ public class Dog  extends Pet{
     public void coolDogMethod() {
         System.out.println("hi");
     }
-
-    public int getRandom() { return random; }
 
     public void randomToo() {
         super.randomToo();
