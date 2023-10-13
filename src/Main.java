@@ -4,19 +4,22 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-
-        Dog d1 = new Dog();
+        Pet d1 = new Dog();
+        // d1.fetch(); // won't compile
+        // Pet p = new Pet(); // will not compile
         d1.speak();
 
         Dog d2 = new Dog();
+        Cat cat = new Cat();
+        Pet bird = new Bird();
 
-        List<Dog> dogs = new ArrayList<>(Arrays.asList(d1, d2));
-        for (Dog dog: dogs) {
-            dog.speak();
+        List<Pet> pets =
+                new ArrayList<>(Arrays.asList(d1, d2, cat, bird));
+        for (Pet pet: pets) {
+            pet.speak();
+            // pet.fetch(); // won't compile
         }
 
-        Cat c = new Cat();
-        c.speak();
 
 
 
