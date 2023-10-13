@@ -5,18 +5,20 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        Dog d1 = new Dog();
+        Pet d1 = new Dog();
         d1.speak();
 
-        Dog d2 = new Dog();
-
-        List<Dog> dogs = new ArrayList<>(Arrays.asList(d1, d2));
-        for (Dog dog: dogs) {
-            dog.speak();
-        }
-
+        Pet d2 = new Dog();
+        // d2.sit(); // will not compile
         Cat c = new Cat();
-        c.speak();
+        Bird b = new Bird();
+        List<Pet> pets =
+                new ArrayList<>(Arrays.asList(d1, d2, c, b));
+        for (Pet pet: pets) {
+            pet.speak();
+            // pet.sit(); // will not compile
+
+        }
 
 
 
