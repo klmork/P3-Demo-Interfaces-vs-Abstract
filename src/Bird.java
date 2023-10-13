@@ -1,6 +1,7 @@
-public class Cat implements Pet {
+public class Bird implements Pet{
     public void speak() {
-        System.out.println("meow");
+        System.out.println("chirp");
     }
     public int eat(int amount) { return amount + 1; }
+
 }
