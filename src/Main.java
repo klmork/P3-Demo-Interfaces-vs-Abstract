@@ -5,23 +5,14 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        Pet p = new Dog(2);
+        Dog p = new Dog();
         p.speak();
 
-        Pet p2 = new Dog(2);
-        
+        Dog p2 = new Dog();
 
-
-
-        Pet robot = new RobotDog(2, 2);
-        List<Pet> pets = new ArrayList<>(Arrays.asList(p, p2, robot));
-        for (Pet pet: pets) {
-            pet.speak();
-            pet.randomMethod();
-            if (pet instanceof Electronic)
-                ((Electronic)robot).charge(2);
-            if (pet instanceof Dog)
-                ((Dog)pet).coolDogMethod();
+        List<Dog> dogs = new ArrayList<>(Arrays.asList(p, p2));
+        for (Dog dog: dogs) {
+            dog.speak();
         }
 
     }
