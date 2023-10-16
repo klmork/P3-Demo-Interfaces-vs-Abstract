@@ -16,7 +16,19 @@ public class Main {
         for (Pet pet: pets) {
             pet.speak(); // does compile
             //pet.sit(); // does not compile
+            pet.sayPet();
             // TODO: call sit on all dog objects
+            // Option 1
+            if (pet instanceof Dog) {
+                // Casting 1
+                ( (Dog)pet).sit();
+            }
+            // Option 2
+            if (pet.getClass() == Dog.class) {
+                // Casting 2
+                Dog dog = (Dog) pet;
+                dog.sit();
+            }
 
 
 
