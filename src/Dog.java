@@ -1,4 +1,4 @@
-public class Dog implements Pet {
+public class Dog implements Robot, Pet {
     private int amountFed;
     private final int fullAt;
     private final int id;
@@ -10,10 +10,7 @@ public class Dog implements Pet {
     public void speak() {
         System.out.println("bark");
     }
-    public boolean eat(int amount) {
-        amountFed += amount;
-        return amountFed > fullAt;
-    }
+
     public void display() {
         System.out.println(id);
     }
@@ -21,4 +18,17 @@ public class Dog implements Pet {
     public void sit() {
         System.out.println("sitting");
     }
+    public void beep() {
+        System.out.println("beep");
+    }
+    public void setAmount(int a) {
+        this.amountFed += a;
+    }
+    public int getAmountFed() {
+        return amountFed;
+    }
+    public int getFullAt() {
+        return fullAt;
+    }
+
 }

@@ -11,11 +11,17 @@ public class Cat implements Pet {
         System.out.println("meow");
     }
 
-    public boolean eat(int amount) {
-        amountFed += amount;
-        return amountFed > fullAt;
-    }
+
     public void display() {
         System.out.println(id);
+    }
+    public void setAmount(int a) {
+        this.amountFed += a;
+    }
+    public int getAmountFed() {
+        return amountFed;
+    }
+    public int getFullAt() {
+        return fullAt;
     }
 }
