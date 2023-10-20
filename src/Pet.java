@@ -1,9 +1,8 @@
-public abstract class Pet extends Identified {
+public abstract class Pet implements Identified {
     private int amountFed;
     private final int fullAt;
 
-    public Pet(int a, int f, int id) {
-        super(id);
+    public Pet(int a, int f) {
         this.amountFed = a;
         this.fullAt = f;
     }

@@ -1,3 +1,3 @@
-public interface Robot {
+public interface Robot extends Identified {
     void beep();
 }
