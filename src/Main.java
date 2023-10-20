@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         Dog dog1 = new Dog(0, 5, 1);
-        Cat cat1 = new Cat(2, 2, 1);
+        Pet cat1 = new Cat(2, 2, 1);
         Roomba roomba1 = new Roomba(1);
 
         // try to never do this
