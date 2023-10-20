@@ -10,8 +10,8 @@ public class Main {
         Roomba roomba1 = new Roomba(1);
 
         // try to never do this
-        List<Object> entities = new ArrayList<>(Arrays.asList(dog1, cat1, roomba1));
-        for (Object o: entities) {
+        List<Object> items = new ArrayList<>(Arrays.asList(dog1, cat1, roomba1));
+        for (Object o: items) {
             if (o instanceof Dog) {
                 ((Dog)o).display();
                 ((Dog)o).speak();
