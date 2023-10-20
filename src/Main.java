@@ -11,15 +11,15 @@ public class Main {
 
         // try to never do this
         List<Object> entities = new ArrayList<>(Arrays.asList(dog1, cat1, roomba1));
-        for (Object entity: entities) {
-            if (entity instanceof Dog) {
-                ((Dog)entity).display();
-                ((Dog)entity).speak();
-            } else if (entity instanceof Cat ) {
-                ((Cat)entity).display();
-                ((Cat)entity).speak();
-            } else if (entity instanceof Roomba){
-                ((Roomba)entity).display();
+        for (Object o: entities) {
+            if (o instanceof Dog) {
+                ((Dog)o).display();
+                ((Dog)o).speak();
+            } else if (o instanceof Cat ) {
+                ((Cat)o).display();
+                ((Cat)o).speak();
+            } else if (o instanceof Roomba){
+                ((Roomba)o).display();
             }
         }
 
