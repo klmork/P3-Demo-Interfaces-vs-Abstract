@@ -10,16 +10,11 @@ public class Main {
         Roomba roomba1 = new Roomba(1);
 
         // try to never do this
-        List<Object> entities = new ArrayList<>(Arrays.asList(dog1, cat1, roomba1));
-        for (Object entity: entities) {
-            if (entity instanceof Dog) {
-                ((Dog)entity).display();
-                ((Dog)entity).speak();
-            } else if (entity instanceof Cat ) {
-                ((Cat)entity).display();
-                ((Cat)entity).speak();
-            } else if (entity instanceof Roomba){
-                ((Roomba)entity).display();
+        List<Identified> items = new ArrayList<>(Arrays.asList(dog1, cat1, roomba1));
+        for (Identified item: items) {
+            item.display();
+            if (item instanceof Pet) {
+                ((Pet)item).speak();
             }
         }
 
