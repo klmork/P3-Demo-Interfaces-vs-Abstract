@@ -1,17 +1,14 @@
-public abstract class Pet implements Identified {
-    private int amountFed;
-    private final int fullAt;
+public interface Pet extends Identified {
 
-    public Pet(int a, int f) {
-        this.amountFed = a;
-        this.fullAt = f;
-    }
-    public boolean eat(int amount) {
-        amountFed += amount;
-        return amountFed > fullAt;
+    default boolean eat(int amount) {
+        setAmountFed(amount);
+        return getAmountFed() > getFullAt();
     }
 
-    abstract void speak();
+    void speak();
+    int getAmountFed();
+    int getFullAt();
+    void setAmountFed(int amount);
 
 
 }
