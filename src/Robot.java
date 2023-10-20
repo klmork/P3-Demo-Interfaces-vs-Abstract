@@ -1,3 +1,5 @@
 public interface Robot extends Identified {
-    void beep();
+    default void beep() {
+        System.out.println("beep");
+    }
 }

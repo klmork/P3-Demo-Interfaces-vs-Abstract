@@ -16,9 +16,7 @@ public class Dog implements Pet, Robot {
         System.out.println("sitting");
     }
 
-    public void beep() {
-        System.out.println("beep");
-    }
+
     public int getId() {
         return id;
     }
