@@ -5,35 +5,22 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        Pet dog1 = new Dog(0, 5, 1);
-        //dog1.sit(); // won't compile
-        Dog dog2 = new Dog(0, 10, 2);
-        dog2.sit(); // does compile
-        Pet cat1 = new Cat(2, 2, 1);
+        Dog dog1 = new Dog(0, 5, 1);
+        Cat cat1 = new Cat(2, 2, 1);
+        Roomba roomba1 = new Roomba(1);
 
-        List<Pet> pets = new ArrayList<>(Arrays.asList(dog1, dog2, cat1));
-
-        for (Pet pet: pets) {
-            pet.speak(); // does compile
-            //pet.sit(); // does not compile
-            pet.sayPet();
-            // TODO: call sit on all dog objects
-            // Option 1
-            if (pet instanceof Dog) {
-                // Casting 1
-                ( (Dog)pet).sit();
+        // try to never do this
+        List<Object> entities = new ArrayList<>(Arrays.asList(dog1, cat1, roomba1));
+        for (Object entity: entities) {
+            if (entity instanceof Dog) {
+                ((Dog)entity).display();
+                ((Dog)entity).speak();
+            } else if (entity instanceof Cat ) {
+                ((Cat)entity).display();
+                ((Cat)entity).speak();
+            } else if (entity instanceof Roomba){
+                ((Roomba)entity).display();
             }
-            // Option 2
-            if (pet.getClass() == Dog.class) {
-                // Casting 2
-                Dog dog = (Dog) pet;
-                dog.sit();
-            }
-
-
-
-
-
         }
 
     }
